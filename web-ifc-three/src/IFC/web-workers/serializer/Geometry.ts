@@ -1,4 +1,4 @@
-import { BufferAttribute, BufferGeometry } from 'three';
+import { BufferAttribute, BufferGeometry, TypedArray } from 'three';
 
 export class SerializedGeometry {
     position: ArrayLike<number>;
@@ -27,8 +27,8 @@ export class GeometryReconstructor {
         return geom;
     }
 
-    private static set(geom: BufferGeometry, name: string, data: ArrayLike<number>, size: number) {
-        if(data.length > 0) {
+    private static set(geom: BufferGeometry, name: string, data: TypedArray, size: number) {
+        if (data.length > 0) {
             geom.setAttribute(name, new BufferAttribute(data, size));
         }
     }

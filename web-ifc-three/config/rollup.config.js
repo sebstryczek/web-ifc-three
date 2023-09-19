@@ -6,7 +6,7 @@ export default [
 {
     // UMD
     input:'src/IFCLoader.ts',
-    external:['web-ifc', 'three-mesh-bvh', 'three', 'three/examples/jsm/utils/BufferGeometryUtils'],
+    external:['web-ifc', 'three-mesh-bvh', 'three', 'three/examples/jsm/utils/BufferGeometryUtils.js'],
 	  output: {
       file: `dist/IFCLoader.umd.cjs`,
       format: "umd",
@@ -16,7 +16,7 @@ export default [
       globals:{
         three:'THREE'
         ,'web-ifc':'WebIFC'
-        ,'three/examples/jsm/utils/BufferGeometryUtils':'THREE.BufferGeometryUtils'
+        ,'three/examples/jsm/utils/BufferGeometryUtils.js':'THREE.BufferGeometryUtils'
         ,'bim-fragment/geometry-utils':'geometryUtils'
         ,'bim-fragment/fragment':'fragment'
       }
@@ -36,7 +36,7 @@ export default [
       sourcemap: true
     }
   ],
-  external: ['web-ifc', 'three-mesh-bvh', 'three', 'three/examples/jsm/utils/BufferGeometryUtils'],
+  external: ['web-ifc', 'three-mesh-bvh', 'three', 'three/examples/jsm/utils/BufferGeometryUtils.js'],
   plugins: [
     resolve(),
     commonjs(),

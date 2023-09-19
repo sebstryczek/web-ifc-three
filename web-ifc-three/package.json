@@ -32,6 +32,7 @@
     "watch": "rollup -c config/rollup.config.js -w",
     "test": "jest"
   },
+  "type": "module",
   "dependencies": {
     "three-mesh-bvh": "0.6.7",
     "web-ifc": "^0.0.43"
@@ -62,6 +63,6 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "three": "^0.151.0"
+    "three": "^0.156.0"
   }
 }

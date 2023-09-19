@@ -18,7 +18,7 @@ import {
     BufferAttribute,
     Mesh
 } from 'three';
-import { mergeBufferGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils';
+import { mergeBufferGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import { BvhManager } from './BvhManager';
 import { IFCModel } from './IFCModel';
 
@@ -154,7 +154,7 @@ export class IFCParser implements ParserAPI {
 
     private updateLoadingState() {
         const realCurrentItem = Math.min(this.loadingState.current++, this.loadingState.total);
-        if(realCurrentItem / this.loadingState.total >= this.loadingState.step) {
+        if (realCurrentItem / this.loadingState.total >= this.loadingState.step) {
             const currentProgress = Math.ceil(this.loadingState.total * this.loadingState.step);
             this.notifyProgress(currentProgress, this.loadingState.total);
             this.loadingState.step += 0.1;
